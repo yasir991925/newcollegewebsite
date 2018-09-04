@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,500,700')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,700')
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700')
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,500,700')
+
+*,::after,::before
+    box-sizing: border-box
+    
+body
+    margin: 0
+
+.home
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    background-color: #03001e
+    background-image: -webkit-linear-gradient(-289deg, #03001e, #7303c0, #ec38bc, #fdeff9)
+    background-image: linear-gradient(19deg,#03001e, #7303c0, #ec38bc, #fdeff9)
+    background-image: url('../images/back8.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: norepeat
+    @media only screen and (max-width: 800px)
+        overflow: auto
+
+.video_layer
+    width: 100%
+    height: 100%
+    overflow: hidden
+    user-select: none
+    position: absolute
+    z-index: 1
+
+.video_layer::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 2
+    // background: #111111
+    opacity: 0.5
+
+.video
+    width: 100%
+    height: auto
+
+.content_layer
+    position: relative
+    z-index: 2
+    width: 100%
+    height: 100%
+    // border: 50px solid #ffffff
+    padding: 50px
+    display: grid
+    font-weight: bold
+    grid-template-rows: 1fr
+    grid-template-columns: 40% 60%
+    @media only screen and (max-width: 800px)
+        border: none
+        height: 200%
+        grid-template-rows: 40% 60%
+        grid-template-columns: 1fr
+
+
+.left__content
+    grid-area: 1/1/2/2
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @media only screen and (max-width: 800px)
+        padding: 50px
+        grid-area: 1/1/2/2
+
+.main__title
+    margin: 0
+    font-size: 5em
+    @media only screen and (max-width: 800px)
+        font-size: 3em
+
+.mtr
+    font-family: "Raleway"
+
+h1
+    font-family: "Raleway",sans-serif
+
+p
+    font-family: "Raleway",sans-serif
+    font-weight: bold
+    @media only screen and (max-width: 800px)
+        font-size: 0.8rem
+
+.time
+    font-family: "Roboto",sans-serif 
+    font-weight: bold
+    display: block
+
+.social-icons
+    width: 30%
+    display: flex
+    flex-direction: row
+    margin-top: 30px
+    font-size: 0.8em
+    justify-content: space-between
+
+.days
+    font-size: 2.5em
+    @media only screen and (max-width: 800px)
+        font-size: 1.5em
+
+.right__content
+    grid-area: 1/1/2/3
+    display: grid
+    grid-template-rows: repeat(5,1fr)
+    grid-template-columns: repeat(7,1fr)
+    @media only screen and (max-width: 800px)
+        display: grid
+        grid-area: 2/1/3/2
+        grid-template-rows: repeat(6,calc(100%/6))
+        grid-template-columns: repeat(5,20%)
+    
+
+.tile
+    background: #eeeeee
+    transition: transform 0.2s
+    box-shadow: 0px 40px 30px 0px rgba(0,0,0,0.1)
+    border-radius: 5px
+    margin: 4px
+    padding: 10px
+    cursor: pointer
+    color: #111111
+    position: relative
+
+
+.background-cover
+    background-image: url('../images/back4.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: norepeat
+
+.tile:hover
+    transform: scale(0.95)
+    // background: rgba(200,200,200,0.8)
+    box-shadow: 0px 20px 80px 0px rgba(40,40,40,.1)
+
+.events
+    grid-area: 1/4/3/6
+    background-image: url('../images/main.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: norepeat
+    color: #ffffff
+    @media only screen and (max-width: 800px)
+        grid-area: 1/1/3/3
+
+.registration
+    grid-area: 3/6/6/8
+    @media only screen and (max-width: 800px)
+        grid-area: 2/3/4/6
+
+.aboutus
+    grid-area: 3/5/4/6
+    @media only screen and (max-width: 800px)
+        grid-area: 6/1/7/3
+
+.cordinators
+    grid-area: 1/6/2/8
+    @media only screen and (max-width: 800px)
+        grid-area: 6/3/7/6
+
+.contact
+    grid-area: 2/6/3/7
+    @media only screen and (max-width: 800px)
+        grid-area: 5/1/6/4
+
+.faq
+    grid-area: 2/7/3/8
+    @media only screen and (max-width: 800px)
+        grid-area: 5/4/6/6
+
+.starevents
+    grid-area: 4/4/5/6
+    @media only screen and (max-width: 800px)
+        grid-area: 4/3/5/6
+
+.videos
+    grid-area: 3/3/4/5
+    @media only screen and (max-width: 800px)
+        grid-area: 1/3/2/6
+
+.event1
+    grid-area: 5/3/6/4
+    @media only screen and (max-width: 800px)
+        grid-area: 3/1/4/3
+
+.event2
+    grid-area: 4/1/5/2
+    @media only screen and (max-width: 800px)
+        grid-area: 4/1/5/3
+
+
+h1,p
+    margin: 0
+
+.sub__title
+    font-family: "Roboto",sans-serif
+    font-weight: bold
+    font-size: 1em
+    text-transform: uppercase
+    // color: #111111
+
+.overlay
+    width: 100vw
+    height: 100vh
+    position: absolute
+    z-index: 1000
+    background: #111111
+    top: 0
+    left: -100%
+
+
+.fab
+    cursor: pointer
+    color: #ffffff
+    transition: color 0.4s
+    &:hover
+        color: #999999
